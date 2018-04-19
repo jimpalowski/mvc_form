@@ -5,6 +5,7 @@ namespace FriendLetter.Controllers
 {
   public class HomeController : Controller
   {
+
     // [Route("/hello")]
     // public string Hello() { return "Hello friend!"; }
     // [Route("/goodbye")]
@@ -28,6 +29,12 @@ namespace FriendLetter.Controllers
     }
     [Route("/form")]
     public ActionResult Form()
+    {
+      return View();
+    }
+    [Produces("text/html")]
+    [Route("/favorite_photos")]
+    public ActionResult FavoritePhotos()
     {
       return View();
     }
